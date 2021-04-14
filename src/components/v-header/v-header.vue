@@ -33,8 +33,8 @@
   </div>
 </template>
 
-<script type="text/ecmascript-6">
-import SupportIco from 'components/support-ico/support-ico'
+<script>
+import SupportIco from '../../components/support-ico/support-ico.vue'
 
 export default {
   name: 'v-header',
@@ -48,11 +48,13 @@ export default {
   },
   methods: {
     showDetail() {
-      this.headerDetailComp = this.headerDetailComp || this.$createHeaderDetail({
-        $props: {
-          seller: 'seller'
-        }
-      })
+      this.headerDetailComp =
+        this.headerDetailComp ||
+        this.$createHeaderDetail({
+          $props: {
+            seller: 'seller'
+          }
+        })
       this.headerDetailComp.show()
     }
   },
@@ -62,9 +64,9 @@ export default {
 }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
-@import "~common/stylus/mixin"
-@import "~common/stylus/variable"
+<style lang="stylus">
+@import "../../common/stylus/mixin"
+@import "../../common/stylus/variable"
 
 .header
   position: relative

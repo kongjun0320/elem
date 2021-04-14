@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <cube-button>hello</cube-button>
+    <v-header />
   </div>
 </template>
 
 <script>
+import VHeader from './components/v-header/v-header.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    VHeader
+  }
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="stylus"></style>
