@@ -43,11 +43,16 @@
               class="food-item"
             >
               <div class="icon">
-                <img width="57" height="57" :src="food.icon" />
+                <img
+                  width="96"
+                  height="96"
+                  style="overflow: hidden; border-radius: 3px"
+                  :src="food.icon"
+                />
               </div>
               <div class="content">
-                <h2 class="name">{{ food.name }}</h2>
-                <p class="desc">{{ food.description }}</p>
+                <h2 class="name ellipsis1">{{ food.name }}</h2>
+                <p class="desc ellipsis1">{{ food.description }}</p>
                 <div class="extra">
                   <span class="count">月售{{ food.sellCount }}份</span
                   ><span>好评率{{ food.rating }}%</span>
@@ -264,6 +269,7 @@ export default {
         height: auto
     .content
       flex: 1
+      overflow: hidden
       .name
         margin: 2px 0 8px 0
         height: 14px
