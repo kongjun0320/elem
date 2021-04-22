@@ -19,7 +19,7 @@
       },
       {
         "type": 1,
-        "description": "支持使用吃货联盟商家红包"
+        "description": "支持使用联盟商家红包"
       },
       {
         "type": 2,
@@ -38,14 +38,14 @@
     "imagePath":
       "https://img.alicdn.com/imgextra/i3/2208503588091/O1CN01CZbACh29djAwHgfCQ_!!2208503588091-0-koubei.jpg",
     "pics": [
-      "http://fuss10.elemecdn.com/8/71/c5cf5715740998d5040dda6e66abfjpeg.jpeg?imageView2/1/w/180/h/180",
-      "http://fuss10.elemecdn.com/b/6c/75bd250e5ba69868f3b1178afbda3jpeg.jpeg?imageView2/1/w/180/h/180",
-      "http://fuss10.elemecdn.com/f/96/3d608c5811bc2d902fc9ab9a5baa7jpeg.jpeg?imageView2/1/w/180/h/180",
-      "http://fuss10.elemecdn.com/6/ad/779f8620ff49f701cd4c58f6448b6jpeg.jpeg?imageView2/1/w/180/h/180"
+     "https://cube.elemecdn.com/b/62/d0c744130c94d18bcfc2fae1ce81ejpeg.jpeg?imageMogr/thumbnail/!180x180r/gravity/Center/crop/180x180/",
+     "https://cube.elemecdn.com/1/64/63d6b148f78bce57d1d315ab3f19bjpeg.jpeg?imageMogr/thumbnail/!180x180r/gravity/Center/crop/180x180/",
+     "https://cube.elemecdn.com/3/26/0d85e835627bf1ab7478a82c7fd6fjpeg.jpeg?imageMogr/thumbnail/!180x180r/gravity/Center/crop/180x180/",
+     "https://cube.elemecdn.com/f/64/c5da139e2b5a07c03824906978474jpeg.jpeg?imageMogr/thumbnail/!180x180r/gravity/Center/crop/180x180/"
     ],
     "infos": [
       "该商家支持发票,请下单写好发票抬头",
-      "品类:其他菜系,包子粥店",
+      "品类:花店",
       "北京市昌平区回龙观西大街龙观置业大厦底商B座102单元1340",
       "营业时间:10:00-20:30"
     ]
@@ -1422,7 +1422,7 @@
       "deliveryTime": 30,
       "score": 5,
       "rateType": 0,
-      "text": "不错,粥很好喝,我经常吃这一家,非常赞,以后也会常来吃,强烈推荐.",
+      "text": "不错,强烈推荐.",
       "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
       "recommend": [
         "南瓜粥",
@@ -1490,7 +1490,7 @@
       "deliveryTime": 30,
       "score": 5,
       "rateType": 0,
-      "text": "很喜欢的粥店",
+      "text": "很喜欢的花店",
       "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
       "recommend": []
     },
@@ -1520,7 +1520,7 @@
       "deliveryTime": "",
       "score": 4,
       "rateType": 0,
-      "text": "孩子喜欢吃这家",
+      "text": "啦啦",
       "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
       "recommend": [
         "南瓜粥"
@@ -1532,7 +1532,7 @@
       "deliveryTime": "",
       "score": 4,
       "rateType": 0,
-      "text": "粥挺好吃的",
+      "text": "很漂亮",
       "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
       "recommend": []
     },
@@ -1592,7 +1592,7 @@
       "deliveryTime": "",
       "score": 5,
       "rateType": 0,
-      "text": "吃了还想再吃",
+      "text": "不错",
       "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
       "recommend": []
     },
@@ -1642,7 +1642,7 @@
       "deliveryTime": "",
       "score": 4,
       "rateType": 0,
-      "text": "很喜欢的粥",
+      "text": "很喜欢的花",
       "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
       "recommend": []
     },
