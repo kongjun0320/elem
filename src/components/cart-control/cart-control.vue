@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex'
 const EVENT_ADD = 'add'
 
 export default {
@@ -20,8 +21,19 @@ export default {
       type: Object
     }
   },
+  computed: {
+    ...mapState(['user', 'token'])
+  },
   methods: {
+    ...mapActions(['getUserInfo']),
     add(event) {
+      if (!this.token) {
+        this.$router.push('/in')
+        return
+      }
+      if (!this.user && this.token) {
+        this.getUserInfo()
+      }
       if (!this.food.count) {
         this.$set(this.food, 'count', 1)
       } else {

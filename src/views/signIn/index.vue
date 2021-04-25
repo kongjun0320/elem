@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { signIn } from '../../api'
+import { mapActions } from 'vuex'
 export default {
   name: 'SignIn',
   data() {
@@ -34,10 +34,11 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['loginAngUser']),
     async _signIn() {
       const { username, password } = this
       const params = { username, password }
-      const result = await signIn(params)
+      const result = await this.loginAngUser(params)
       if (result) {
         this.$router.push('/')
       }

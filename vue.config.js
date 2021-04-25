@@ -39,6 +39,14 @@ module.exports = {
         res.json({
           errno: 0,
           data: {
+            token: 'a.b.c'
+          }
+        })
+      })
+      app.post('/api/user', function (_req, res) {
+        res.json({
+          errno: 0,
+          data: {
             username: 'Jack'
           }
         })
