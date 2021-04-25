@@ -1,6 +1,12 @@
 <template>
   <div class="header" @click="showDetail">
     <div class="content-wrapper">
+      <img
+        class="profile"
+        @click="$router.push('/profile')"
+        src="../../assets/profile.svg"
+        alt=""
+      />
       <div class="avatar">
         <img width="64" height="64" :src="seller.imagePath" />
       </div>
@@ -78,6 +84,10 @@ export default {
     display: flex
     align-items: center
     padding: 24px 12px 18px 24px
+    .profile
+      position absolute
+      top 10px
+      right 10px
     .avatar
       flex: 0 0 64px
       width: 64px
