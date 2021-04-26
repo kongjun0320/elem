@@ -17,25 +17,25 @@ module.exports = {
   },
   devServer: {
     before(app) {
-      app.get('/api/seller', function (_req, res) {
+      app.get('/seller', function (_req, res) {
         res.json({
           errno: 0,
           data: seller
         })
       })
-      app.get('/api/goods', function (_req, res) {
+      app.get('/category', function (_req, res) {
         res.json({
           errno: 0,
           data: goods
         })
       })
-      app.get('/api/ratings', function (_req, res) {
+      app.get('/ratings', function (_req, res) {
         res.json({
           errno: 0,
           data: ratings
         })
       })
-      app.post('/api/in', function (_req, res) {
+      app.post('/in', function (_req, res) {
         res.json({
           errno: 0,
           data: {
@@ -43,7 +43,7 @@ module.exports = {
           }
         })
       })
-      app.post('/api/user', function (_req, res) {
+      app.post('/user', function (_req, res) {
         res.json({
           errno: 0,
           data: {

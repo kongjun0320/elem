@@ -63,6 +63,7 @@ export default {
       getSeller({
         id: this.seller.id
       }).then((seller) => {
+        // this.seller = Object.assign({}, this.seller, seller)
         this.seller = Object.assign({}, this.seller, seller)
       })
     }

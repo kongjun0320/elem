@@ -21,7 +21,7 @@
                   :size="3"
                   :type="props.txt.type"
                 ></support-ico>
-                <span>{{ props.txt.name }}</span>
+                <span>{{ props.txt.name }}{{ props.txt.type }}</span>
                 <span class="num" v-if="props.txt.count">
                   <bubble :num="props.txt.count"></bubble>
                 </span>
@@ -47,7 +47,7 @@
                   width="96"
                   height="96"
                   style="overflow: hidden; border-radius: 3px"
-                  :src="food.icon"
+                  :src="food.image"
                 />
               </div>
               <div class="content">
@@ -150,6 +150,7 @@ export default {
         getGoods({
           id: this.seller.id
         }).then((goods) => {
+          console.log(goods)
           this.goods = goods
         })
       }

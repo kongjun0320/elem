@@ -39,7 +39,12 @@ export default {
   data() {
     return {
       model: {
-        uploadValue: [],
+        uploadValue: [
+          {
+            url:
+              'http://localhost:3333/uploads/upload_a2eb082fd61c83c934807482bd18d2b4.jpeg'
+          }
+        ],
         nickname: 'jack',
         password: '',
         gender: '',
@@ -55,11 +60,20 @@ export default {
           events: {
             'file-removed': (...args) => {
               console.log('file removed', args)
+            },
+            'file-success': (...args) => {
+              console.log(args)
+            },
+            'file-error': (...args) => {
+              console.log(args)
             }
           },
           props: {
             multiple: false,
-            max: 1
+            max: 1,
+            action: {
+              target: 'http://localhost:3333/upload'
+            }
           }
         },
 
@@ -139,23 +153,6 @@ export default {
     validateHandler(result) {
       this.validity = result.validity
       this.valid = result.valid
-      console.log(
-        'validity',
-        result.validity,
-        result.valid,
-        result.dirty,
-        result.firstInvalidFieldIndex
-      )
-    },
-    showDatePicker() {
-      this.$refs.datePicker.show()
-    },
-    dateSelectHandler(selectedVal) {
-      this.model.dateValue = new Date(
-        selectedVal[0],
-        selectedVal[1] - 1,
-        selectedVal[2]
-      ).toDateString()
     }
   }
 }
