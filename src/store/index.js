@@ -20,20 +20,26 @@ export default new Vuex.Store({
   },
   actions: {
     async login({ commit }, payload) {
-      const { token } = await signIn(payload)
+      const { token, loginUser: user } = await signIn(payload)
       commit('login', token)
-      localStorage.setItem('token', token)
+      commit('setUser', user)
+      // localStorage.setItem('token', token)
       axios.defaults.headers.common.Authorization = `Bearer ${token}`
+      return {
+        token,
+        user
+      }
     },
     async getUserInfo({ commit }) {
       const res = await getUser()
       commit('setUser', res)
       return res
     },
-    loginAngUser({ dispatch }) {
-      return dispatch('login').then(() => {
-        return dispatch('getUserInfo')
-      })
+    loginAngUser({ dispatch }, payload) {
+      return dispatch('login', payload)
+      // return dispatch('login', payload).then(() => {
+      //   return dispatch('getUserInfo')
+      // })
     }
   },
   modules: {}

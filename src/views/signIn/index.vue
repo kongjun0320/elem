@@ -39,6 +39,7 @@ export default {
       const { username, password } = this
       const params = { username, password }
       const result = await this.loginAngUser(params)
+      console.log(result)
       if (result) {
         this.$router.push('/')
       }

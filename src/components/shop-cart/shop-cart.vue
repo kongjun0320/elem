@@ -43,6 +43,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import Bubble from '../../components/bubble/bubble'
 
 const BALL_LEN = 10
@@ -146,6 +147,16 @@ export default {
         title: '支付',
         content: `您需要支付${this.totalPrice}元`
       }).show()
+      console.log(this.selectFoods)
+      this.selectFoods.forEach((food) => {
+        const params = { ...food, info: '花' }
+        delete params.category
+        delete params._id
+        axios.post('http://localhost:3333/order', params).then((res) => {
+          console.log(res)
+        })
+      })
+
       e.stopPropagation()
     },
     drop(el) {

@@ -156,7 +156,78 @@ export default {
       }
     },
     selectFood(food) {
-      this.selectedFood = food
+      console.log(food)
+      // eslint-disable-next-line no-unused-vars
+      const d = {
+        name: '热销爆款【罗曼蒂克】11枝红玫瑰花搭配尤加利鲜花花束 F-3',
+        price: 10,
+        oldPrice: '',
+        description:
+          '价格说明 1.未划线价：未划线价是当前商品或服务在本平台上的实时销售价（不含包装费、运输费等），是您最终决定是否购买商品或服务的依据。具体成交价格根据商品或服务参加的活动等情况发生变化，最终以订单结算页面呈现的价格为准。 2.划线价:划线价为参考价，并非价值或线下实体门店的销售价。该划线价可能是商品或服务的网络零售指导价、商家提供的正品零售价或该商品/服务在本平台上曾经展示过的销售价等。由于地区、时间在差异性和市场行情波动，零售指导价、销售价等可能会与您购物时展示的价格不一致，划线价仅供您参考。',
+        sellCount: 229,
+        rating: 100,
+        info: '热销爆款【罗曼蒂克】11枝红玫瑰花搭配尤加利鲜花花束 F-3',
+        ratings: [
+          {
+            username: '3******c',
+            rateTime: 1469281964000,
+            rateType: 0,
+            text: '很喜欢的花',
+            avatar:
+              'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
+          },
+          {
+            username: '2******3',
+            rateTime: 1469271264000,
+            rateType: 0,
+            text: '',
+            avatar:
+              'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
+          },
+          {
+            username: '3******b',
+            rateTime: 1469261964000,
+            rateType: 1,
+            text: '',
+            avatar:
+              'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
+          }
+        ],
+        icon:
+          'https://img.alicdn.com/imgextra/i3/111483146/O1CN01Q7wxBJ1Z6udKWdskJ_!!111483146-2-eleretail.png_196x196Q90s50_.webp',
+        image:
+          'https://img.alicdn.com/imgextra/i3/111483146/O1CN01Q7wxBJ1Z6udKWdskJ_!!111483146-2-eleretail.png_196x196Q90s50_.webp'
+      }
+      const tempFood = {
+        ...food,
+        ratings: [
+          {
+            username: '3******c',
+            rateTime: 1469281964000,
+            rateType: 0,
+            text: '很喜欢的花',
+            avatar:
+              'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
+          },
+          {
+            username: '2******3',
+            rateTime: 1469271264000,
+            rateType: 0,
+            text: '还不错',
+            avatar:
+              'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
+          },
+          {
+            username: '3******b',
+            rateTime: 1469261964000,
+            rateType: 1,
+            text: '不咋地',
+            avatar:
+              'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
+          }
+        ]
+      }
+      this.selectedFood = tempFood
       this._showFood()
       this._showShopCartSticky()
     },

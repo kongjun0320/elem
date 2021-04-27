@@ -35,7 +35,7 @@ module.exports = {
           data: ratings
         })
       })
-      app.post('/in', function (_req, res) {
+      app.post('/user/login', function (_req, res) {
         res.json({
           errno: 0,
           data: {

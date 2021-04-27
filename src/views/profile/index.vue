@@ -26,7 +26,13 @@
           <cube-form-item :field="fields[5]"></cube-form-item>
         </cube-form-group>
         <cube-form-group>
-          <cube-button type="submit">Submit</cube-button>
+          <cube-form-item :field="fields[6]"></cube-form-item>
+        </cube-form-group>
+        <cube-form-group>
+          <cube-form-item :field="fields[7]"></cube-form-item>
+        </cube-form-group>
+        <cube-form-group>
+          <cube-button @click="edit">修改</cube-button>
         </cube-form-group>
       </cube-form>
     </section>
@@ -34,18 +40,15 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'Profile',
   data() {
     return {
       model: {
-        uploadValue: [
-          {
-            url:
-              'http://localhost:3333/uploads/upload_a2eb082fd61c83c934807482bd18d2b4.jpeg'
-          }
-        ],
+        uploadValue: [{}],
         nickname: 'jack',
+        username: '',
         password: '',
         gender: '',
         age: '',
@@ -81,6 +84,17 @@ export default {
           type: 'input',
           modelKey: 'nickname',
           label: '昵称',
+          props: {
+            placeholder: '请输入'
+          },
+          rules: {
+            required: true
+          }
+        },
+        {
+          type: 'input',
+          modelKey: 'username',
+          label: '用户名',
           props: {
             placeholder: '请输入'
           },
@@ -146,7 +160,50 @@ export default {
       ]
     }
   },
+  mounted() {
+    this.getUser()
+  },
   methods: {
+    getUser() {
+      this.model.uploadValue = []
+      axios
+        .get(`http://localhost:3333/user/${this.$store.state.user._id}`)
+        .then((res) => {
+          const data = res.data
+          console.log(res)
+          this.model = { ...data, uploadValue: [] }
+          this.model.uploadValue.push({
+            url: data.image
+          })
+
+          console.log(res)
+        })
+    },
+    edit() {
+      const {
+        nickname,
+        username,
+        password,
+        gender,
+        age,
+        location,
+        phone
+      } = this.model
+      const params = {
+        nickname,
+        image: this.model.uploadValue[0].url,
+        username,
+        password,
+        gender,
+        age,
+        location,
+        phone
+      }
+      console.log(params)
+      axios.patch(`/user/${this.$store.state.user._id}`, params).then((res) => {
+        console.log(res)
+      })
+    },
     submitHandler(e) {
       console.log('submit', e)
     },
