@@ -38,9 +38,13 @@ export default {
     async _signIn() {
       const { username, password } = this
       const params = { username, password }
-      const result = await this.loginAngUser(params)
-      if (result) {
-        this.$router.push('/')
+      try {
+        const result = await this.loginAngUser(params)
+        if (result) {
+          this.$router.push('/')
+        }
+      } catch (error) {
+        alert('用户名或者密码错误   ')
       }
     }
   }
