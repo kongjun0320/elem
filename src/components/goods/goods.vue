@@ -21,7 +21,7 @@
                   :size="3"
                   :type="props.txt.type"
                 ></support-ico>
-                <span>{{ props.txt.name }}{{ props.txt.type }}</span>
+                <span>{{ props.txt.name }}</span>
                 <span class="num" v-if="props.txt.count">
                   <bubble :num="props.txt.count"></bubble>
                 </span>

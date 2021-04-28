@@ -202,6 +202,7 @@ export default {
       console.log(params)
       axios.patch(`/user/${this.$store.state.user._id}`, params).then((res) => {
         console.log(res)
+        this.$router.push('/')
       })
     },
     submitHandler(e) {

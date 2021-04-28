@@ -39,7 +39,10 @@ module.exports = {
         res.json({
           errno: 0,
           data: {
-            token: 'a.b.c'
+            token: 'a.b.c',
+            loginUser: {
+              username: 'jack'
+            }
           }
         })
       })

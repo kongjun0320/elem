@@ -3,8 +3,14 @@
     <div class="content-wrapper">
       <img
         class="profile"
-        @click="$router.push('/profile')"
+        @click.stop="$router.push('/profile')"
         src="../../assets/profile.svg"
+        alt=""
+      />
+      <img
+        class="logout"
+        @click.stop="$router.push('/in')"
+        src="../../assets/logout.svg"
         alt=""
       />
       <div class="avatar">
@@ -85,6 +91,12 @@ export default {
     align-items: center
     padding: 24px 12px 18px 24px
     .profile
+      position absolute
+      top 10px
+      right 50px
+    .logout
+      width 32px
+      height 32px
       position absolute
       top 10px
       right 10px
